@@ -34,7 +34,7 @@ First you had to know with which algorithm the file was encrypted. So I entered 
 ## Solution
 Having found the encryption algorithm (Atbash Cipher) I entered the https://www.dcode.fr/atbash-cipher page where I added the text and deciphered it.
 
-IMAGE
+![image](https://github.com/user-attachments/assets/9fbcb8c1-6e6d-48c0-b94b-ebde4577cc78)
 
 ```
 ofxrzuvi 1:19 KN
