@@ -70,7 +70,7 @@ Modify the print code line to print the flag: `printf ("% c ", flag [i]);`.
 ## How to avoid
 Do not leave the encryption key within reach of other people.
 
-## Solution
+## Full solution
 When we execute the code it gives us the flag.
 
 ```c++
