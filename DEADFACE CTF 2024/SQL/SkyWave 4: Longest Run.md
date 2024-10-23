@@ -24,13 +24,25 @@ Determinar qué dispositivo tuvo la conexión más larga en una de las torres co
 Primero nos debemos conectar a MySQL `ssh skywave@skywave.deadface.io` `d34df4c3`.
 Con el comando `show tables;` podemos ver todas las tablas:
 
-Imagen
-
+```
++-------------------------+
+| Tables_in_cell_tower_db |
++-------------------------+
+| Antennas                |
+| Carriers                |
+| Connections             |
+| Device_Types            |
+| Devices                 |
+| Operators               |
+| Technicians             |
+| Tower_Maintenance       |
+| Tower_Sectors           |
+| Towers                  |
++-------------------------+
+```
 Con el comando `describe [nombre_de_tabla]` podemos ver las columnas que tienen las tablas de interés:
 
-Imagen
-Imagen
-Imagen
+
 
 ## Solution
 
