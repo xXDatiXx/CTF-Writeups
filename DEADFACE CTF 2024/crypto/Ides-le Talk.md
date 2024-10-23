@@ -51,7 +51,7 @@ LUCILIUS He is at hand; and Pindarus is come To do you salutation from his maste
 Use more complex and secure encryption algorithms instead of simple encryption like ROT13 or César encryption. Some recommended ciphers are:
 - AES (Advanced Encryption Standard): A widely used and robust symmetric encryption.
 - RSA (Rivest – Shamir – Adleman): Asymmetric encryption that is used in many modern security applications.
-## Solution
+## Full solution
 `flag{L3t_The#Mi$chiefs^8361n}`
 
 
