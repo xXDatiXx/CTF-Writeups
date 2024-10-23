@@ -17,12 +17,12 @@
 >Additionally, let’s focus on only finding the longest running connection with a dBm greater than -100.
 >
 >Submit the flag as flag{device_imei}. Example: flag{123456789012345}
-### Objetivo
-Determinar qué dispositivo tuvo la conexión más larga en una de las torres con las coordenadas proporcionadas y filtrar las conexiones que tienen una señal de más de -100 dBm.
+### Objective
+Determine which device had the longest connection at one of the towers with the provided coordinates, and filter the connections that have a signal strength greater than -100 dBm.
 
 ## Analysis
-Primero nos debemos conectar a MySQL `ssh skywave@skywave.deadface.io` `d34df4c3`.
-Con el comando `show tables;` podemos ver todas las tablas:
+First, we need to connect to MySQL: `ssh skywave@skywave.deadface.io` `d34df4c3`.
+With the `show tables;` command, we can see all the tables:
 
 ```
 +-------------------------+
@@ -40,13 +40,14 @@ Con el comando `show tables;` podemos ver todas las tablas:
 | Towers                  |
 +-------------------------+
 ```
-Con el comando `describe [nombre_de_tabla]` podemos ver las columnas que tienen las tablas de interés:
+With the `describe [table_name]` command, we can see the columns in the tables of interest.
 
-
-
+![image](https://github.com/user-attachments/assets/46fbbe73-7ac6-4c20-a517-6ae56f4e00d5)
+![image](https://github.com/user-attachments/assets/f9800dca-e916-40bc-846a-492995ec7aca)
+![image](https://github.com/user-attachments/assets/1ca5e383-55e3-44a9-b300-4d0f6b6acc27)
 ## Solution
 
-1. Identificar los `tower_id` de las torres en las corrdenadas dadas:
+1. Identify the `tower_id` of the towers at the given coordinates:
 ```SQL
 SELECT tower_id FROM Towers
 WHERE (latitude = 41.639642 AND longitude = -79.220682)
@@ -54,7 +55,7 @@ WHERE (latitude = 41.639642 AND longitude = -79.220682)
    OR (latitude = 41.045892 AND longitude = -79.068358)
    OR (latitude = 41.257279 AND longitude = -77.529468);
 ```
-Resultado:
+Result:
 ```
 +----------+
 | tower_id |
@@ -65,7 +66,7 @@ Resultado:
 |      200 |
 +----------+
 ```
-2. Buscar la conexión más larga:
+2. Find the longest connection:
 ```SQL
 SELECT device_id, MAX(connection_duration)
 FROM Connections
@@ -75,21 +76,21 @@ GROUP BY device_id
 ORDER BY MAX(connection_duration) DESC
 LIMIT 1;
 ```
-Resultado:
+Result:
 ```
 +-----------+--------------------------+
-| device_id | MAX(connection_duration) |
+| device_id | MAX(connection_duration)  |
 +-----------+--------------------------+
-|       344 |                    85709 |
+|       344 |                    85709  |
 +-----------+--------------------------+
 ```
-3. Obtener IMEI
+3. Obtain the IMEI:
 ```SQL
 SELECT device_imei
 FROM Devices
 WHERE device_id = 344;
 ```
-Resultado:
+Result:
 ```
 +-----------------+
 | device_imei     |
