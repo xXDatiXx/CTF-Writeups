@@ -61,7 +61,7 @@ I'll start drafting some personas and scripts. Once he's under our influence, we
 Use more complex and secure encryption algorithms instead. Some recommended ciphers are:
 - AES (Advanced Encryption Standard): A widely used and robust symmetric encryption.
 - RSA (Rivest – Shamir – Adleman): Asymmetric encryption that is used in many modern security applications.
-## Solution
+## Full solution
 Reading the deciphered text in the penultimate line we find the name `Elroy Ongaro`.
 
 `flag{Elroy_Ongaro}`
