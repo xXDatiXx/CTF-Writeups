@@ -57,6 +57,11 @@ Absolutely! Elroy Ongaro has no idea what's coming his way. I've already got a f
 
 I'll start drafting some personas and scripts. Once he's under our influence, we can orchestrate the SQL exploit seamlessly. Your expertise in that area is going to be crucial.
 ```
+## How to avoid
+Use more complex and secure encryption algorithms instead. Some recommended ciphers are:
+- AES (Advanced Encryption Standard): A widely used and robust symmetric encryption.
+- RSA (Rivest – Shamir – Adleman): Asymmetric encryption that is used in many modern security applications.
+## Solution
 Reading the deciphered text in the penultimate line we find the name `Elroy Ongaro`.
 
 `flag{Elroy_Ongaro}`
