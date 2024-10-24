@@ -5,7 +5,6 @@
 - Beginner
 
 ### Description
-
 >We intercepted this chat log between luciafer and lilith. We believe they’re discussing who or what they will target for their social engineering campaign.
 >Decode the message and submit the name of the target. The key is to remember that sometimes the simplest solutions are just waiting to be reflected upon.
 >Submit the flag as flag(First_Last).
