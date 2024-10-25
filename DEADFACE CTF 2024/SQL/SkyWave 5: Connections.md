@@ -1,4 +1,4 @@
-# SkyWave 4: Longest Run
+# SkyWave 5: Connections
 ## Challenge
 - SQL
 - Beginner
